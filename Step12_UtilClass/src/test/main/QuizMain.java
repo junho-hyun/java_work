@@ -53,7 +53,7 @@ public class QuizMain {
 	
 
 	
-	
+	// 
 	//		public static void main(String[] args) {
 //		int[] lotto = new int[6];
 //		
