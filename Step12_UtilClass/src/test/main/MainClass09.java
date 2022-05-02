@@ -22,6 +22,8 @@ public class MainClass09 {
 		set1.add(30);
 
 		//문자열을 저장할 수 있는 HashSet 객체
+		//HashSet 은 Set의 상속자이므로 new에서 HashSet을 했다면 Set만으로
+		//그걸 정의 할 수 있다.
 		Set<String> set2=new HashSet<>();
 		set2.add("kim");
 		set2.add("lee");
