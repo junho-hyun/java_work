@@ -27,9 +27,11 @@ public class MainClass01 {
 		System.out.println("무언가 중요한 마무리 작업을 하고 main 메소드가 종료 됩니다.");
 		
 		
-		/* 콘솔창에 입력한 정보가 숫자 double 범위에 없다면 Exception 이
+		/* 
+		 * 콘솔창에 입력한 정보가 숫자 double 범위에 없다면 Exception 이
 		 * 일어나는데 이 경우 try문안으로 감싼다음 {} catch 문에
-		 * 숫자예외의 입력값이 나와도 출력하라는 명렁어를 실행 하는 코드.
+		 * 숫자예외(NumberFormatException)의 입력값이 나와도 출력하라는 
+		 * 명렁어를 실행 하는 코드.
 		 */
 	}
 }
