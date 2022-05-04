@@ -33,9 +33,9 @@ public class Frame06 extends JFrame implements ActionListener{
    
    public static void main(String[] args) {
       //MyFrame 클래스를 이용해서 객체 생성하고 참조값을 지역변수 frame 에 담기 
-      Frame05 frame=new Frame05();
+      Frame06 frame=new Frame06();
       //프레임의 제목 설정
-      frame.setTitle("Frame02");
+      frame.setTitle("Frame06");
       //프레임을 닫으면 자동으로 프로세스가 종료 되도록 한다.
       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       frame.setBounds(100, 100, 500, 500);
