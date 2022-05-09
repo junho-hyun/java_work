@@ -72,9 +72,10 @@ public class QuizMain2 extends JFrame implements ActionListener{
       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       f.setVisible(true);
    }
-FileWriter fw=null;
-FileReader fr=null;
-BufferedReader br=null;
+   
+	FileWriter fw=null;
+	FileReader fr=null;
+	BufferedReader br=null;
 @Override
 public void actionPerformed(ActionEvent e) {
 	
@@ -94,7 +95,8 @@ public void actionPerformed(ActionEvent e) {
 					if(line==null) {
 						break;
 					}
-					System.out.println(line);
+					area.append(line);
+					area.append("\r\n");
 					
 				}
 			}
