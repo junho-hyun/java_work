@@ -51,6 +51,7 @@ public class MainClass02 {
 			pstmt.setString(2, name);
 			pstmt.setString(3, addr);
 			//sql 문 실행하기
+			//insert, updaet, delete => .executeUpdate();
 			pstmt.executeUpdate();
 			
 			System.out.println("회원 정보를 저장했습니다.");

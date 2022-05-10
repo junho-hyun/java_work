@@ -42,8 +42,8 @@ public class MainClass10 {
          pstmt.setString(2, dto.getAddr());
          pstmt.setInt(3, dto.getNum());
          //sql 문 실행하기
-           pstmt.executeUpdate();
-           System.out.println("회원 정보를 수정했습니다.");
+         pstmt.executeUpdate();
+         System.out.println("회원 정보를 수정했습니다.");
       }catch(Exception e) {
          e.printStackTrace();
       }finally {

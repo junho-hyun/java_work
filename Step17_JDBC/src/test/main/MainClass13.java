@@ -9,7 +9,7 @@ import java.util.List;
 import test.dto.MemberDto;
 import test.util.DBConnect;
 
-public class MainClass12 {
+public class MainClass13 {
 	public static void main(String[] args) {
 		//메소드가 리턴해주는 전체 회원의 목록을 main 메소드 안에서 사용하고 싶다면?
 		List<MemberDto> list=getList(); //메소드를 호출해서 전체 회원목록을 받아온다.
@@ -55,40 +55,13 @@ public class MainClass12 {
 				member.setAddr(rs.getString("addr"));
 				//ArrayList 객체에 누적 시키기
 				list1.add(member);
-				
-				/*
-				 *  혹은 
-				 *  //new MemberDto 가 while 문 안에 있어야
-				 *  하나가 성생되고 그 다음이 또 생성되고 하지 반복문 밖에 있으면
-				 *  여러개를 쓸 수 없다.
-				 *  
-				 *  MemberDto member=new MemberDto(); 생성하고
-				 *
-				 *  int num=rs.getInt("num");
-				 *  String name=rs.getString("name");
-				 *  String addr=rs.getString("addr");
-				 *   
-				 *  //회원 정보를 객체에 담아서 실행하느 방식 하지만 한번밖에
-				 *  안쓸거기 때문에 굳이 지역변수를 만들어서 담을 필요는 없다.
-				 *  member.setNum(num);
-				 *  member.setName(name);
-				 *  member.setAddr(addr);
-				 *  //작성 방법만 다를뿐 같은 방식이다.
-				 *  list1.add(member);
-				 *  이렇게 실해해도 된다.
-				 */
 			}
 			
 		}catch(Exception e) {
 			e.printStackTrace();
-		}finally {
-	         try {
-	            if(rs!=null)rs.close();
-	        	if(pstmt!=null)pstmt.close();
-	            if(conn!=null)conn.close();
-	         }catch(Exception e) {}
-	
-		} return list1;
+		}
+		
+	    return list1;
 	}
-	   
+	
 }
