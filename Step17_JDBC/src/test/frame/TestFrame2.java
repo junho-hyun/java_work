@@ -94,13 +94,13 @@ public class TestFrame2 extends JFrame implements ActionListener{
    	public void displayMember() {
 	   
 	   MemberDao dao=new MemberDao();
-	   MemberDto dto=new MemberDto();
+	   //MemberDto dto=new MemberDto();
 	
 	   List<MemberDto> list=dao.getList();
 	   
 	   for(int i=0; i<list.size();i++) {
 		   MemberDto data=list.get(i);
-		   model.addRow(new Object[] {data.getNum(), data.getName(), data.getAddr()});
+		   model.addRow(new Object[] {list.get(i).getNum(), data.getName(), data.getAddr()});
 
 	   }
 
@@ -128,7 +128,11 @@ public class TestFrame2 extends JFrame implements ActionListener{
    			dto.setAddr(addr);
    			dto.setName(name);
    			dao.insert(dto);
+   			
+   			//테이블에 출력된 데이터 reset 시킨후 
+   			//이 테이블 reset 은 display 메소드에서 실행해도 된다.
    			model.setRowCount(0);
+   			//테이블 불러오기
    			displayMember();
    			
    		}else if(e.getSource() == deleteBtn) {
@@ -138,10 +142,10 @@ public class TestFrame2 extends JFrame implements ActionListener{
    			int selectedIndex=table.getSelectedRow();
    			int num=(int)model.getValueAt(selectedIndex,0);
    			
-   			boolean isDelete=dao.delete(num);
-   			if(isDelete)
-   				model.setRowCount(0);
-   				displayMember();
+   			dao.delete(num);
+   			
+   			model.setRowCount(0);
+   			displayMember();
    		}
    	}
 }
