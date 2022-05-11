@@ -28,7 +28,7 @@ public class SalesFrame extends JFrame implements ActionListener, PropertyChange
 	public SalesFrame() {
 		setLayout(new BorderLayout());
 		
-		JLabel label1=new JLabel("품목");
+		JLabel label1=new JLabel("종류");
 		inputKinds=new JTextField(20);
 		
 		JLabel label2=new JLabel("가격");
