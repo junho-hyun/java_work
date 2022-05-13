@@ -15,5 +15,6 @@ public class MainClass02 {
 		//nums[3]=400; // ??? 없는 방 번호를 참조하면 Exception 이 발생한다.
 		
 		System.out.println("마무리 작업을 하고 app 을 종료합니다.");
+		
 	}
 }

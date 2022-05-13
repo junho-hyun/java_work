@@ -16,5 +16,9 @@ public class MainClass03 {
 			//출력하기
 			System.out.println(tmp);
 		}
+		int [] nums=new int[3];
+		nums[0]=1;
+		nums[1]=3;
+		System.out.println(nums);
 	}
 }

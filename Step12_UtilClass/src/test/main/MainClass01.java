@@ -35,4 +35,5 @@ public class MainClass01 {
 		names.clear();
 		
 	}
+	ArrayList<Integer> nu=new ArrayList<>();
 }
